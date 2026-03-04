@@ -5,13 +5,14 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo 'Checking out code from GitHub...'
+                echo 'Checking out code...'
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Building application...'
+                error "Build failed intentionally!"
             }
         }
 
